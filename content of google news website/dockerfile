@@ -1,0 +1,6 @@
+FROM python:3.8
+ADD main.py .
+RUN pip install requests beautifulsoup4 html5lib lxml
+RUN apt-get update
+
+CMD ["python3", "./main.py" ]
